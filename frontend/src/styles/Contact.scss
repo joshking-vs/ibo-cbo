@@ -1,0 +1,305 @@
+@import './variables.scss';
+
+.contact-page {
+  .contact-hero {
+    background: linear-gradient(135deg, $primary-teal 0%, darken($primary-teal, 5%) 100%);
+    color: $white;
+    padding: $spacing-xl 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: slideInLeft 0.8s ease-in-out;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba($secondary-gold, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba($secondary-gold, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .contact-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: $spacing-md;
+      position: relative;
+      z-index: 2;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    
+    .contact-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      position: relative;
+      z-index: 2;
+      line-height: 1.8;
+    }
+  }
+  
+  .contact-content {
+    padding: $spacing-xl 0;
+    background-color: $light-cream;
+    
+    .contact-info-section {
+      .section-title {
+        color: $light-cream;
+        font-weight: 700;
+        margin-bottom: $spacing-lg;
+        font-size: 1.8rem;
+      }
+      
+      .contact-card {
+        background: $white;
+        border: 2px solid lighten($secondary-gold, 20%);
+        border-radius: $border-radius-lg;
+        margin-bottom: $spacing-md;
+        transition: all $transition-base;
+        
+        &:hover {
+          border-color: $secondary-gold;
+          box-shadow: $shadow-lg;
+          
+          .contact-icon {
+            transform: scale(1.2) rotate(10deg);
+          }
+          
+          .contact-label {
+            color: $secondary-gold;
+          }
+        }
+        
+        .contact-icon {
+          font-size: 2.5rem;
+          margin-bottom: $spacing-sm;
+          transition: all $transition-base;
+        }
+        
+        .contact-label {
+          color: $primary-teal;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          transition: all $transition-base;
+        }
+        
+        .contact-detail {
+          color: $light-text;
+          margin: 0;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          
+          a {
+            color: $secondary-gold;
+            text-decoration: none;
+            transition: all $transition-base;
+            
+            &:hover {
+              color: $accent-brown;
+            }
+          }
+        }
+      }
+    }
+    
+    .form-card {
+      background: $white;
+      border: none;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-md;
+      
+      .form-title {
+        color: $primary-teal;
+        font-weight: 700;
+        margin-bottom: $spacing-sm;
+        font-size: 1.8rem;
+      }
+      
+      .form-subtitle {
+        color: $light-text;
+        margin-bottom: $spacing-lg;
+      }
+    }
+  }
+  
+  .faq-section {
+    padding: $spacing-xl 0;
+    background-color: $white;
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: $spacing-xl;
+      
+      h2 {
+        font-size: 2.5rem;
+        color: $primary-teal;
+        margin-bottom: $spacing-md;
+      }
+      
+      .header-underline {
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, $secondary-gold 0%, $accent-brown 100%);
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+    }
+    
+    .faq-container {
+      .faq-item {
+        margin-bottom: $spacing-lg;
+        padding: $spacing-md;
+        background: $light-cream;
+        border-radius: $border-radius-md;
+        border-left: 4px solid $secondary-gold;
+        transition: all $transition-base;
+        
+        &:hover {
+          box-shadow: $shadow-md;
+          transform: translateX(5px);
+        }
+        
+        .faq-question {
+          display: flex;
+          align-items: flex-start;
+          gap: $spacing-md;
+          margin-bottom: $spacing-sm;
+          cursor: pointer;
+          
+          .faq-number {
+            flex-shrink: 0;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, $secondary-gold 0%, $accent-brown 100%);
+            color: $white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+          }
+          
+          h6 {
+            margin: 0;
+            color: $primary-teal;
+            font-weight: 700;
+            font-size: 1.1rem;
+          }
+        }
+        
+        .faq-answer {
+          margin-left: 55px;
+          
+          p {
+            color: $light-text;
+            margin: 0;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+  
+  .map-section {
+    padding: $spacing-xl 0;
+    background-color: $light-cream;
+    
+    .map-title {
+      color: $primary-teal;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: $spacing-lg;
+      font-size: 2rem;
+    }
+    
+    .map-container {
+      border-radius: $border-radius-lg;
+      overflow: hidden;
+      box-shadow: $shadow-md;
+      
+      iframe {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+  
+  .newsletter-section {
+    background: linear-gradient(135deg, $secondary-gold 0%, lighten($secondary-gold, 10%) 100%);
+    padding: $spacing-xl $spacing-md;
+    
+    h3 {
+      color: $primary-teal;
+      font-weight: 700;
+      margin-bottom: $spacing-md;
+      font-size: 2rem;
+    }
+    
+    p {
+      color: $primary-teal;
+      font-size: 1.1rem;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      gap: $spacing-sm;
+      max-width: 500px;
+      margin: 0 auto;
+      
+      input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        border-radius: $border-radius-md;
+        font-size: 1rem;
+        
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba($primary-teal, 0.1);
+        }
+      }
+      
+      button {
+        padding: 1rem 2rem;
+        background-color: $primary-teal;
+        color: $white;
+        border: none;
+        border-radius: $border-radius-md;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all $transition-base;
+        
+        &:hover {
+          background-color: darken($primary-teal, 10%);
+          transform: translateY(-2px);
+          box-shadow: $shadow-md;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        flex-direction: column;
+        
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

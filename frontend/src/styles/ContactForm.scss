@@ -1,0 +1,23 @@
+.contact-form {
+    input, textarea, select {
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+      
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        transform: translateY(-2px);
+      }
+    }
+    
+    button {
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      
+      &:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+      }
+    }
+  }

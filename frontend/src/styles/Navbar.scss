@@ -1,0 +1,209 @@
+@import './variables.scss';
+
+.brand-text{
+    color: rgba($primary-teal, 0.7);
+}
+.home-page {
+  .hero-section {
+    background: linear-gradient(135deg, $light-cream 0%, lighten($secondary-gold, 15%) 100%);
+    padding: $spacing-xl 0;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba($secondary-gold, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: $primary-teal;
+      margin-bottom: $spacing-lg;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: $light-text;
+      margin-bottom: $spacing-lg;
+      line-height: 1.8;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: $spacing-md;
+      flex-wrap: wrap;
+      
+      .btn {
+        min-width: 150px;
+      }
+      
+      @media (max-width: 768px) {
+        flex-direction: column;
+        
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+    
+    .hero-image {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero-image-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, rgba($primary-teal, 0.1) 0%, rgba($secondary-gold, 0.1) 100%);
+      border-radius: $border-radius-xl;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      overflow: hidden;
+      
+      @media (max-width: 768px) {
+        margin-top: $spacing-lg;
+      }
+    }
+  }
+  
+  .services-preview {
+    padding: $spacing-xl 0;
+    background-color: $white;
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: $spacing-xl;
+      
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: $spacing-md;
+      }
+      
+      .header-underline {
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, $secondary-gold 0%, $accent-brown 100%);
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+    }
+    
+    .service-card {
+      background: $white;
+      border: 2px solid lighten($secondary-gold, 20%);
+      border-radius: $border-radius-lg;
+      padding: $spacing-lg;
+      text-align: center;
+      transition: all $transition-base;
+      
+      &:hover {
+        border-color: $secondary-gold;
+        box-shadow: $shadow-lg;
+        transform: translateY(-10px);
+        
+        .service-icon {
+          transform: scale(1.2) rotate(5deg);
+        }
+      }
+      
+      .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: $spacing-md;
+        transition: all $transition-base;
+      }
+      
+      h5 {
+        color: $primary-teal;
+        font-weight: 700;
+        margin-bottom: $spacing-sm;
+      }
+      
+      p {
+        color: $light-text;
+        font-size: 0.95rem;
+      }
+    }
+  }
+  
+  .stats-section {
+    background: linear-gradient(135deg, $primary-teal 0%, darken($primary-teal, 5%) 100%);
+    padding: $spacing-xl 0;
+    color: $white;
+    
+    .stat-item {
+      text-align: center;
+      padding: $spacing-lg;
+      transition: all $transition-base;
+      
+      &:hover {
+        transform: translateY(-10px);
+      }
+      
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: $secondary-gold;
+        margin-bottom: $spacing-sm;
+      }
+      
+      .stat-label {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
+      }
+    }
+  }
+  
+  .cta-section {
+    background: linear-gradient(135deg, $secondary-gold 0%, lighten($secondary-gold, 10%) 100%);
+    padding: $spacing-xl $spacing-md;
+    
+    .cta-content {
+      text-align: center;
+      
+      h2 {
+        color: $primary-teal;
+        font-size: 2.5rem;
+        margin-bottom: $spacing-md;
+      }
+      
+      p {
+        color: $primary-teal;
+        font-size: 1.1rem;
+        margin-bottom: $spacing-lg;
+      }
+      
+      .btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-md;
+        transition: all $transition-base;
+        
+        &:hover {
+          box-shadow: $shadow-lg;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}

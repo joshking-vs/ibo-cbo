@@ -1,0 +1,325 @@
+@import './variables.scss';
+
+// Reset and Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: $dark-text;
+  line-height: 1.6;
+  background-color: $light-cream;
+  overflow-x: hidden;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-teal;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  color: $light-text;
+  margin-bottom: $spacing-md;
+  line-height: 1.8;
+}
+
+a {
+  color: $secondary-gold;
+  text-decoration: none;
+  transition: all $transition-base;
+  
+  &:hover {
+    color: $accent-brown;
+  }
+}
+
+// Containers
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+main {
+  flex-grow: 1;
+  background-color: $light-cream;
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+// Utility Classes
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.fade-in-delay-1 {
+  animation: fadeIn 0.8s ease-in-out 0.2s backwards;
+}
+
+.fade-in-delay-2 {
+  animation: fadeIn 0.8s ease-in-out 0.4s backwards;
+}
+
+.fade-in-delay-3 {
+  animation: fadeIn 0.8s ease-in-out 0.6s backwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-in-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-in-out;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.8s ease-in-out;
+}
+
+.hover-lift {
+  transition: all $transition-base;
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Cards
+.card {
+  border: none;
+  border-radius: $border-radius-lg;
+  background-color: $white;
+  box-shadow: $shadow-sm;
+  transition: all $transition-base;
+  overflow: hidden;
+  
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+  
+  .card-body {
+    padding: $spacing-lg;
+  }
+}
+
+// Buttons
+.btn {
+  border-radius: $border-radius-md;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all $transition-base;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(-1px);
+  }
+}
+
+.btn-primary {
+  background-color: $primary-teal;
+  color: $white;
+  
+  &:hover {
+    background-color: darken($primary-teal, 10%);
+    color: $white;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-gold;
+  color: $white;
+  
+  &:hover {
+    background-color: darken($secondary-gold, 10%);
+    color: $white;
+  }
+}
+
+.btn-outline-primary {
+  border: 2px solid $primary-teal;
+  color: $primary-teal;
+  background-color: transparent;
+  
+  &:hover {
+    background-color: $primary-teal;
+    color: $white;
+  }
+}
+
+// Forms
+.form-control, .form-select {
+  border: 2px solid #e0e0e0;
+  border-radius: $border-radius-md;
+  padding: 0.75rem 1rem;
+  transition: all $transition-base;
+  font-size: 1rem;
+  
+  &:focus {
+    border-color: $secondary-gold;
+    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+    outline: none;
+  }
+}
+
+.form-label {
+  color: $primary-teal;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+// Sections
+section {
+  padding: $spacing-lg 0;
+  
+  &.bg-primary {
+    background-color: $primary-teal;
+    color: $white;
+  }
+  
+  &.bg-secondary {
+    background-color: $secondary-gold;
+  }
+  
+  &.bg-cream {
+    background-color: $light-cream;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding: 0 $spacing-sm;
+  }
+  
+  section {
+    padding: $spacing-lg 0;
+  }
+}
+
+// Accessibility
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

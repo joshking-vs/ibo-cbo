@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+.get-involved-page {
+    .hero-section {
+        animation: slideInLeft 0.8s ease-in-out;
+        background: linear-gradient(135deg, $secondary-gold 0%,$light-cream 100%);
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    }
+    
+    .hover-lift {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+      }
+    }
+  }

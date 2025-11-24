@@ -1,0 +1,31 @@
+@import './variables.scss';
+.services-page {
+  .services-hero {
+    background: linear-gradient(135deg, $light-cream 0% );
+    // background-color: black;
+  }
+  
+  .service-card {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15) !important;
+      
+      .service-icon {
+        animation: bounce 0.5s ease;
+      }
+    }
+  }
+  
+  .target-groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

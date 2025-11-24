@@ -1,0 +1,18 @@
+.hero-image-placeholder {
+    min-height: 400px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    animation: fadeIn 0.8s ease-in-out 0.6s backwards;
+  }
+  
+  .service-card {
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+  
+  .cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }

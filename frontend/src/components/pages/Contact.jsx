@@ -11,7 +11,7 @@ function Contact() {
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center">
-              <h1 className="contact-title fade-in">Get In Touch</h1>
+              <h1 className="contact-page-title  fade-in">Get In Touch</h1>
               <p className="contact-subtitle fade-in-delay-1">
                 Have questions or want to get involved? We'd love to hear from you. 
                 Reach out to us anytime and we'll respond as soon as possible.

@@ -2,7 +2,7 @@
 
 .contact-page {
   .contact-hero {
-    background: linear-gradient(135deg, $primary-teal 0%, darken($primary-teal, 5%) 100%);
+    background: linear-gradient(135deg, $light-cream 10%, darken($primary-teal, 5%) 100%);
     color: $white;
     padding: $spacing-xl 0;
     text-align: center;
@@ -33,6 +33,7 @@
     }
     
     .contact-title {
+      color: aliceblue !important ;
       font-size: 3.5rem;
       font-weight: 800;
       margin-bottom: $spacing-md;
@@ -59,7 +60,7 @@
     
     .contact-info-section {
       .section-title {
-        color: $light-cream;
+        color: $primary-teal;
         font-weight: 700;
         margin-bottom: $spacing-lg;
         font-size: 1.8rem;

@@ -28,18 +28,18 @@ function Footer() {
           <Col md={3} className="mb-4 mb-md-0">
             <h5 className="fw-bold mb-3">Contact Info</h5>
             <p className="text-muted small mb-2">
-              <strong>Phone:</strong> +254 XXX XXX XXX
+              <strong>Phone:</strong> +254 720 979 015
             </p>
             <p className="text-muted small">
-              <strong>Email:</strong> contact@ibocbo.org
+              <strong>Email:</strong> ibocbokenya@gmail.com 
             </p>
           </Col>
           <Col md={3}>
             <h5 className="fw-bold mb-3">Follow Us</h5>
             <div className="social-links">
-              <a href="#" className="text-muted text-decoration-none me-3 hover-link">Facebook</a>
-              <a href="#" className="text-muted text-decoration-none me-3 hover-link">Twitter</a>
-              <a href="#" className="text-muted text-decoration-none hover-link">LinkedIn</a>
+              <a href="https://web.facebook.com/profile.php?id=61584210346023" target="_blank" className="text-muted text-decoration-none me-3 hover-link">Facebook</a>
+              {/* <a href="#" className="text-muted text-decoration-none me-3 hover-link">Twitter</a>
+              <a href="#" className="text-muted text-decoration-none hover-link">LinkedIn</a> */}
             </div>
           </Col>
         </Row>

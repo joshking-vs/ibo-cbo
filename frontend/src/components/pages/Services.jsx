@@ -53,24 +53,26 @@ function Services() {
           <Row>
             {[
               {
-                title: 'Psychosocial Counseling',
-                description: 'Professional mental health support for individuals living with HIV, cancer, or survivors of GBV'
+                title: 'Health-centered support for people who use drugs',
+                description: 'We address drug use as a public health issue by promoting safer practices, reducing harm, and supporting access to health and social services without stigma or punishment.'
               },
               {
-                title: 'Mobile Health Clinics',
-                description: 'On-site health screenings and services in underserved areas'
+                title: 'Cancer Awareness',
+                description: 'Through our cancer awareness programs, we educate communities about prevention, early detection, and available treatment options, empowering individuals to take charge of their health.'
               },
               {
-                title: 'Community Education',
-                description: 'Workshops and training programs on health awareness and disease prevention'
+                title: 'Gender-Based Violence',
+                description: 'Our dedicated response initiatives address the critical issue of gender-based violence, offering support services, legal advocacy, and community education to help victims reclaim their lives.'
               },
               {
-                title: 'Advocacy & Policy Reform',
-                description: 'Work with governments to create health policies that protect marginalized groups'
+                title: 'Harm Reduction: Reducing risks and Protecting lives ',
+                description: 'Our Harm reduction services prioritize dignity informed choice and evidence -based approaches to reduce helth and social harms linked to drug use'
               },
               {
-                title: 'Survivor Support Networks',
-                description: 'Peer support groups for HIV and cancer survivors'
+                title: 'HIV: Prevention, care, and stigma-free access',
+                description: 'We provide HIV education, prevention, and referal to testing  and care, especially for the population  facing hightened risk due to exclusion and vulnerability.'
+
+
               },
               {
                 title: 'Legal Support',

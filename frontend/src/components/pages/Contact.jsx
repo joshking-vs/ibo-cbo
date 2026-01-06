@@ -33,9 +33,10 @@ function Contact() {
                 <Card className="contact-card hover-lift slide-in-left">
                   <Card.Body>
                     <div className="contact-icon">📍</div>
-                    <h6 className="contact-label">Office Address</h6>
+                    <h6 className="contact-label">Postal Address</h6>
                     <p className="contact-detail">
-                      Nairobi, Kenya
+                      3294-40100 <br />
+                      Kisumu, Kenya
                     </p>
                   </Card.Body>
                 </Card>
@@ -45,7 +46,7 @@ function Contact() {
                     <div className="contact-icon">📞</div>
                     <h6 className="contact-label">Phone Number</h6>
                     <p className="contact-detail">
-                      <a href="tel:+254XXXXXXXXX">+254 XXX XXX XXX</a>
+                      <a href="tel:+254 720 979 015">+254 720 979 015</a>
                     </p>
                   </Card.Body>
                 </Card>
@@ -55,7 +56,7 @@ function Contact() {
                     <div className="contact-icon">✉️</div>
                     <h6 className="contact-label">Email Address</h6>
                     <p className="contact-detail">
-                      <a href="mailto:contact@ibocbo.org">contact@ibocbo.org</a>
+                      <a href="mailto:ibocbokenya@gmail.com">ibocbokenya@gmail.com</a>
                     </p>
                   </Card.Body>
                 </Card>
@@ -66,7 +67,7 @@ function Contact() {
                     <h6 className="contact-label">Business Hours</h6>
                     <p className="contact-detail">
                       <strong>Monday - Friday:</strong><br />
-                      9:00 AM - 5:00 PM<br />
+                      8:00 AM - 7:00 PM<br />
                       <strong>Saturday - Sunday:</strong><br />
                       Closed
                     </p>
@@ -113,16 +114,13 @@ function Contact() {
                   },
                   {
                     q: 'How do I donate to the organization?',
-                    a: 'You can contact us for information about donation options, including direct transfers, mobile money, and corporate sponsorships. All donations are tax-deductible.'
+                    a: 'You can contact us for information about donation options, including direct transfers, mobile money, and corporate sponsorships.'
                   },
                   {
                     q: 'What services do you provide?',
                     a: 'We provide HIV prevention, cancer awareness, psychosocial counseling, healthcare access initiatives, and advocacy for policy reforms affecting marginalized communities.'
                   },
-                  {
-                    q: 'Do you offer emergency support?',
-                    a: 'Yes, we have 24/7 support available for emergencies. Please call our emergency line or visit our office. For life-threatening situations, please call emergency services.'
-                  },
+                  
                   {
                     q: 'Can I request a speaker for my organization?',
                     a: 'Absolutely! Contact us to arrange a speaker for your event, workshop, or training session. Our team members have expertise in various health and advocacy topics.'
@@ -152,7 +150,7 @@ function Contact() {
               <h3 className="map-title">Visit Us</h3>
               <div className="map-container">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8187103692074!2d36.7265807!3d-1.2864469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d6a0b8e6dd%3A0x50968d0d61018c8!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31910.42845663701!2d34.7431265!3d-0.0917025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa4846430932b%3A0x6b801a6b0c6a512d!2sKisumu%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
                   width="100%"
                   height="400"
                   style={{ border: 0, borderRadius: '12px' }}

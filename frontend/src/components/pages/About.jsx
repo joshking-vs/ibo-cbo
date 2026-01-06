@@ -10,6 +10,35 @@ function About() {
   if (loading) return <div className="text-center py-5">Loading...</div>;
   if (error) return <div className="alert alert-danger">Failed to load organization data</div>;
 
+  // Placeholder data for the team. 
+  // You can later replace this with data fetched from your backend (api/team/).
+  const teamMembers = [
+    { 
+      name: 'Charles okoth outa', 
+      role: 'Board chairman', 
+      img: '/charles.jpeg', // Replace with /media/team/photo1.jpg
+      bio: 'Charles brings a wealth of experience in leadership and strategic planning, with a deep passion for empowering communities and advancing the mission of IBO CBO. His visionary approach has been instrumental in shaping the organizations path forward.' 
+    },
+    { 
+      name: 'George Odhiambo Oketch ', 
+      role: 'Program Manager', 
+      img: '/George.png', // Replace with /media/team/photo2.jpg
+      bio: 'Aiming to engage in research, project implementation and advocacy on development by using interactive and participatory approaches towards behavior change. ' 
+    },
+    { 
+      name: 'Ali Odhiambo Owino', 
+      role: 'Chief operations officer', 
+      img: '/Ali.jpeg', // Replace with /media/team/photo3.jpg
+      bio: ' My work focuses on trauma counseling, GBV/SGBV response, and the design of community-based mental health and public health programs for marginalized and vulnerable populations.' 
+    },
+    { 
+      name: 'Peninah Anyango Otieno', 
+      role: 'Board member', 
+      img: '/Peninah.jpeg', // Replace with /media/team/photo3.jpg
+      bio: 'Peninah brings a community-centered perspective grounded in lived experience and a deep understanding of the social and economic challenges facing women at the household and community level' 
+    },
+  ];
+
   return (
     <div className="about-page">
       {/* Hero Section */}
@@ -86,8 +115,39 @@ function About() {
         </Container>
       </section>
 
+      {/* Team Section (INSERTED HERE) */}
+      <section className="team-section py-5">
+        <Container>
+          <h2 className="text-center mb-5 fw-bold">Meet Our Team</h2>
+          <Row>
+            {teamMembers.map((member, index) => (
+              <Col md={4} key={index} className="mb-4">
+                <Card className="h-100 border-0 shadow-sm text-center hover-lift">
+                  <div className="pt-4">
+                    {/* Circle Image Style */}
+                    <img 
+                      src={member.img} 
+                      alt={member.name}
+                      className="rounded-circle shadow-sm"
+                      style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+                    />
+                  </div>
+                  <Card.Body>
+                    <Card.Title className="fw-bold mt-3">{member.name}</Card.Title>
+                    <Card.Subtitle className="mb-3 text-primary">{member.role}</Card.Subtitle>
+                    <Card.Text className="text-muted small">
+                      {member.bio}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
+
       {/* Organization Info */}
-      <section className="org-info py-5">
+      <section className="org-info py-5 bg-light">
         <Container>
           <Row>
             <Col md={6} className="mb-4 mb-md-0">
@@ -99,9 +159,9 @@ function About() {
                 We ensure full adherence to legal and regulatory requirements while maintaining the highest standards of accountability, transparency, and ethical practices.
               </p>
               <div className="contact-info mt-4">
-                <p className="mb-2"><strong>Address:</strong> {org?.address || 'Nairobi, Kenya'}</p>
-                <p className="mb-2"><strong>Phone:</strong> {org?.phone || '+254 XXX XXX XXX'}</p>
-                <p className="mb-2"><strong>Email:</strong> {org?.email || 'contact@ibocbo.org'}</p>
+                <p className="mb-2"><strong>Address:</strong> {org?.address || 'Kisumu, Kenya'}</p>
+                <p className="mb-2"><strong>Phone:</strong> {org?.phone || '+254 720 979 015'}</p>
+                <p className="mb-2"><strong>Email:</strong> {org?.email || ' ibocbokenya@gmail.com '}</p>
               </div>
             </Col>
             <Col md={6}>

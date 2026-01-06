@@ -9,10 +9,12 @@ import About from './components/pages/About';
 import Services from './components/pages/Services';
 import GetInvolved from './components/pages/GetInvolved';
 import Contact from './components/pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="d-flex flex-column min-vh-100">
         <NavBar />
         <main className="flex-grow-1">

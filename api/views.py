@@ -44,7 +44,7 @@ class ContactViewSet(viewsets.ViewSet):
                 subject=f"New Contact Form: {subject}",
                 message=f"From: {name}\nEmail: {email}\n\n{message}",
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=['contact@ibocbo.org'],
+                recipient_list=['ibocbokenya@gmail.com'],
                 fail_silently=False,
             )
             return Response({'success': 'Message sent successfully'})

@@ -48,7 +48,7 @@ function Home() {
             <div className="header-underline"></div>
             <h3 className="hero-subtitle fade-in-delay-1">
               <br />
-                {org?.mission || 'Prevention of organised crime and violence, research, community capacity building, harm reduction and prevention of adfiction'}
+                {org?.mission || 'Prevention of organised crime and violence, research, community capacity building, harm reduction and prevention of addiction'}
               </h3>
           </div>
           <Row className="g-4">

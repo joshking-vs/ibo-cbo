@@ -25,8 +25,13 @@ class TeamViewSet(viewsets.ModelViewSet):
     pagination_class = None
 
 
-@action(detail=False, methods=['post'])
+class ContactViewSet(viewsets.ViewSet):
+    # The class starts here.
+    # The methods must be indented by 4 spaces.
+
+    @action(detail=False, methods=['post'])
     def send_message(self, request):
+        # Everything inside the function must be indented further
         name = request.data.get('name')
         email = request.data.get('email')
         subject = request.data.get('subject')
@@ -39,7 +44,7 @@ class TeamViewSet(viewsets.ModelViewSet):
             )
         
         try:
-            # We use EmailMessage so we can set the "Reply-To" header
+            # Create the email object
             email_message = EmailMessage(
                 subject=f"New Contact Form: {subject}",
                 body=f"Name: {name}\nUser Email: {email}\n\nMessage:\n{message}",

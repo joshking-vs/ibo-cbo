@@ -15,3 +15,5 @@ export const fetchTeam = () => api.get('/team/');
 export const sendContactMessage = (data) => api.post('/contact/send_message/', data);
 
 export default api;
+
+// ...axios

@@ -46,6 +46,10 @@ function Home() {
           <div className="section-header">
             <h2>Our Focus Areas</h2>
             <div className="header-underline"></div>
+            <h3 className="hero-subtitle fade-in-delay-1">
+              <br />
+                {org?.mission || 'Advancing health literacy, healthcare access, and social empowerment for vulnerable populations.'}
+              </h3>
           </div>
           <Row className="g-4">
             {services?.map((service, index) => (

@@ -30,37 +30,37 @@ function GetInvolved() {
                 icon: '🤝',
                 title: 'Volunteer',
                 description: 'Donate your time and skills to support our programs and community initiatives',
-                action: 'Learn More'
+                action: <Link to="/contact" className='text-white'>Learn More</Link>
               },
               {
                 icon: '💰',
                 title: 'Donate',
                 description: 'Provide financial support to help us expand our healthcare services and advocacy work',
-                action: 'Donate Now'
+                action: <Link to="/contact" className='text-white' >Donate Now</Link>
               },
               {
                 icon: '👥',
                 title: 'Become a Member',
                 description: 'Join our community and participate in decision-making and program planning',
-                action: 'Join Us'
+                action: <a href="https://web.facebook.com/profile.php?id=61584210346023" target="_blank" >Join Us</a>
               },
               {
                 icon: '🤝',
                 title: 'Partner With Us',
                 description: 'Organizations can partner with us to co-deliver programs and services',
-                action: 'Partner'
+                action: <Link to="/contact" className='text-white'>Partner</Link>
               },
               {
                 icon: '📢',
                 title: 'Advocate',
                 description: 'Support our advocacy efforts for policy reform and social justice',
-                action: 'Get Involved'
+                action: <Link to="/contact" className='text-white'>Get Involved</Link>
               },
               {
                 icon: '💼',
                 title: 'Work With Us',
                 description: 'Explore career opportunities to advance our mission from within',
-                action: 'View Jobs'
+                action: <Link to="/contact" className='text-white'>View Jobs</Link>
               },
             ].map((item, index) => (
               <Col md={4} key={index} className="mb-4">
@@ -166,11 +166,11 @@ function GetInvolved() {
                 Get Started
               </Button>
             </Col>
-            <Col xs="auto">
+            {/* <Col xs="auto">
               <Button size="lg" variant="outline-light">
                 Learn More
               </Button>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>

@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # The Database (Postgres)
+  db:
+    image: postgres:15
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=ibocbo_db
+      - POSTGRES_USER=ibo_user
+      - POSTGRES_PASSWORD=supersecretpassword
+
+  # The Django Backend
+  backend:
+    build: ./backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=dev_secret_key
+      # This connects Django to the 'db' service above
+      - DB_ENGINE=django.db.backends.postgresql
+      - DB_NAME=ibocbo_db
+      - DB_USER=ibo_user
+      - DB_PASSWORD=supersecretpassword
+      - DB_HOST=db
+      - DB_PORT=5432
+      # Email settings (passed from your .env or hardcoded here for testing)
+      - EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+      - EMAIL_HOST=smtp.gmail.com
+      - EMAIL_PORT=587
+      - EMAIL_USE_TLS=True
+      - EMAIL_HOST_USER=ibocbokenya@gmail.com
+      # Paste your App Password below (remove spaces!)
+      - EMAIL_HOST_PASSWORD=xefalopfvcftzehz 
+
+volumes:
+  postgres_data:

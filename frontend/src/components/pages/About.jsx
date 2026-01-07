@@ -37,6 +37,12 @@ function About() {
       img: '/Peninah.jpeg', // Replace with /media/team/photo3.jpg
       bio: 'Peninah brings a community-centered perspective grounded in lived experience and a deep understanding of the social and economic challenges facing women at the household and community level' 
     },
+    { 
+      name: 'Harriet Awuor', 
+      role: 'Board secretary', 
+      img: '/Harriet.jpeg', // Replace with /media/team/photo3.jpg
+      bio: 'I am deeply passionate about youth development and social welfare. I actively support welfare groups that empower young people to build sustainable futures' 
+    },
   ];
 
   return (

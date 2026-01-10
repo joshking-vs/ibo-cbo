@@ -75,7 +75,7 @@ function About() {
                 <Card.Body className="p-4">
                   <h3 className="fw-bold mb-3">🎯 Our Vision</h3>
                   <p className="text-muted">
-                    {org?.vision || 'To create an empowered, inclusive, and resilient society where marginalized communities have access to essential healthcare, education, and social support.'}
+                    {org?.vision || 'An empowered, inclusive, and resilient society where marginalized women and communities can access healthcare, education, and social support, live with dignity, and shape their own futures.'}
                   </p>
                 </Card.Body>
               </Card>
@@ -85,7 +85,7 @@ function About() {
                 <Card.Body className="p-4">
                   <h3 className="fw-bold mb-3">💡 Our Mission</h3>
                   <p className="text-muted">
-                    {org?.mission || 'To advance health literacy, healthcare access, and social empowerment of marginalized populations through comprehensive support and systemic advocacy.'}
+                    {org?.mission || 'To build community resilience by enhancing health literacy, improving healthcare access, and empowering marginalized populations through community-led support and advocacy.'}
                   </p>
                 </Card.Body>
               </Card>

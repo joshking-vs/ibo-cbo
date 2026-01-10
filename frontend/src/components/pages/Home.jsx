@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import { fetchOrganization, fetchServices } from '../../utils/api';
 import '../../styles/Home.scss';
+import FocusAreas from '../FocusAreas';
 
 function Home() {
   const { data: org } = useFetch(fetchOrganization);
@@ -43,25 +44,7 @@ function Home() {
       {/* Services Preview */}
       <section className="services-preview">
         <Container>
-          <div className="section-header">
-            <h2>Our Focus Areas</h2>
-            <div className="header-underline"></div>
-            <h3 className="hero-subtitle fade-in-delay-1">
-              <br />
-                {org?.mission || 'Prevention of organised crime and violence, research, community capacity building, harm reduction and prevention of addiction'}
-              </h3>
-          </div>
-          <Row className="g-4">
-            {services?.map((service, index) => (
-              <Col lg={4} md={6} key={service.id} className="slide-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="service-card hover-lift">
-                  <div className="service-icon">{service.icon}</div>
-                  <h5>{service.title}</h5>
-                  <p>{service.description}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
+          < FocusAreas />
         </Container>
       </section>
 

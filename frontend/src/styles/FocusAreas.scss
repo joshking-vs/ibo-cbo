@@ -1,0 +1,39 @@
+.focus-grid {
+    display: grid;
+    // This creates a responsive grid:
+    // It fits as many 280px cards as possible, then wraps to the next line.
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .focus-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); // Subtle shadow
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+  
+    &:hover {
+      transform: translateY(-5px); // Moves up slightly on hover
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); // Shadow grows
+      border-color: #007bff; // Optional: Change border color on hover
+    }
+  
+    h3 {
+      color: #2c3e50;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+  
+    p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }

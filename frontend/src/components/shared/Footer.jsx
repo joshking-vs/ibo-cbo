@@ -37,7 +37,7 @@ function Footer() {
           <Col md={3}>
             <h5 className="fw-bold mb-3">Follow Us</h5>
             <div className="social-links">
-              <a href="https://web.facebook.com/profile.php?id=61584210346023" target="_blank" className="text-muted text-decoration-none me-3 hover-link">Facebook</a>
+              <a href="https://web.facebook.com/profile.php?id=61584210346023" target="_blank" rel='noopener noreferrer' className="text-muted text-decoration-none me-3 hover-link">Facebook</a>
               {/* <a href="#" className="text-muted text-decoration-none me-3 hover-link">Twitter</a>
               <a href="#" className="text-muted text-decoration-none hover-link">LinkedIn</a> */}
             </div>

@@ -42,7 +42,7 @@ function GetInvolved() {
                 icon: '👥',
                 title: 'Become a Member',
                 description: 'Join our community and participate in decision-making and program planning',
-                action: <a href="https://web.facebook.com/profile.php?id=61584210346023" target="_blank" >Join Us</a>
+                action: <a href="https://web.facebook.com/profile.php?id=61584210346023" target="_blank" rel='noopener noreferrer'>Join Us</a>
               },
               {
                 icon: '🤝',

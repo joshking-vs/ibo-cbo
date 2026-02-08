@@ -8,7 +8,8 @@ import FocusAreas from '../FocusAreas';
 
 function Home() {
   const { data: org } = useFetch(fetchOrganization);
-  const { data: services } = useFetch(fetchServices);
+  
+  useFetch(fetchServices);
 
   return (
     <div className="home-page">

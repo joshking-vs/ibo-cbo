@@ -27,7 +27,7 @@ function ContactForm() {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await sendContactMessage(formData);
+      await sendContactMessage(formData);
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully.',

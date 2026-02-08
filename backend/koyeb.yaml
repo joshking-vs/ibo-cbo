@@ -1,0 +1,25 @@
+name: ibo-cbo-backend
+services:
+  - name: api
+    type: web # Changed from worker to web to allow public access
+    image: docker.io/library/python:3.11-slim
+    build:
+      type: buildpack
+    ports:
+      - port: 8000
+        protocol: http
+    routes:
+      - path: /
+        port: 8000
+    regions:
+      - fra
+    instance_type: nano
+    env:
+      - key: DATABASE_URL
+        value: "{{ secret.DATABASE_URL }}" # Ensure this secret is created in Koyeb
+      - key: ALLOWED_HOSTS
+        value: "{{ KOYEB_PUBLIC_DOMAIN }},ibo-cbo.org"
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        value: "{{ django-insecure-v^9+@7!3j#m$8x&1z(2p)5q*4r%6t-8w_0y=1a!2b@3c#4d$ }}" # Add your Django secret key here

@@ -13,4 +13,7 @@ gunicorn
 dj-database-url
 django-anymail[resend]
 requests
+gunicorn
+dj-database-url
+whitenoise
 # Production requirements
